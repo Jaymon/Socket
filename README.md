@@ -8,15 +8,17 @@ push it out since it isn't doing anyone any good just sitting on my computer.
 
 ## Run the demo
 
-To get it working, you just need to start the server in one shell, and then run the client in another server
+To get it working, you just need to start the server in one shell, and then run the client in another shell
 
-### 1 - Start the server
+### 1 - Start the server (shell 1)
 
     php server.php
 
-### 2 - Send the server a message using the client
+### 2 - Send the server a message using the client (shell 2)
 
     php client.php "I am sending a message"
+
+Shell 1 (the server) should've printed `I am sending a message`.
 
 Basically, the Socket server takes a callback and listens for input, when it gets input
 it will then run that callback on the input and return it. Take a look at the `client.php` and
